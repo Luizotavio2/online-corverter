@@ -22,13 +22,30 @@ html, body{
     background-color: var(--color-background);
     font-family: var(--font-base);
     color: var(--color-text);
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
     display: flex;
     justify-content: center; 
     align-items: center;  
     height: 100vh;
     flex-direction: column;
+    gap: 2px;
 }
 
-footer{
-    background-color: var(--color-footer);
+#coin-value{
+    width: 250px;
+    height: 25px;
+    border-radius: var(--radius);
+}
+
+.index_main_label{
+    border-radius: var(--radius);
+}
+
+.index_main_button{
+    border-radius: var(--radius);
+    cursor: pointer;
 }

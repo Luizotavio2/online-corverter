@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de moeda</title>
+    <title>Currency converter</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="apps.js" defer ></script>
 </head>
 <body>
-    <header class="index_header">
-        <strong>ONLINE CONVERTER</strong>
-    </header>
     <main class="index_main">
-        <input type="text" name="value" id="coin-value" placeholder="Value in Dólar">
-        <label for="coin">Choose</label>
-        <button onclick="convert()">CONVERT</button>
+        <strong>ONLINE CONVERTER</strong>
+        <input type="text" name="value" id="coin-value" placeholder="  Value in Dólar">
+        <label for="coin" class="index_main_label">Choose a currency:</label>
+            <select id="coin" name="coin">
+                <option value="USD">USD - United States Dollar</option>
+                <option value="BRL">BRL - Brazilian Real</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound Sterling</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+            </select>
+
+        <button onclick="convert()" aria-label="Convert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 
+             1.415-1.414l-3.85-3.85zm-5.242 1.106a5 5 0 1 1 
+             0-10 5 5 0 0 1 0 10z"/>
+            </svg>
+</button>
+    <h2 id="result"></h2>
     </main>
+
 
 </body>
 </html>
