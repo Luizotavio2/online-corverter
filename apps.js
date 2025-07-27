@@ -2,17 +2,18 @@ async function convert() {
   const input = document.getElementById('coin-value');
   const targetCurrency = document.getElementById('coin').value;
   const baseCurrency = 'USD';
-  const resultArea = document.getElementById('result'); // precisa existir um elemento com id="result"
+  const resultArea = document.getElementById('result'); 
+
 
   const amount = parseFloat(input.value);
 
   if (input.value.trim() === '') {
-    alert('Type a dollar value');
+    resultArea.textContent = 'You can not add empty values';
     return;
   }
 
   if (isNaN(amount)) {
-    alert('Insert a number value');
+    resultArea.textContent = 'You inserted a non-numeric value';
     return;
   }
 

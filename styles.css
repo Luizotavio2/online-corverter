@@ -1,51 +1,107 @@
 :root {
-  --color-background: #1B263B;
-  --color-footer: #2F4858
-  --color-surface: #E0E1DD;
-  --color-text: #F5F9FF;
-  --color-primary: #2EC4B6;
-  --color-primary-hover: #9EE493;
-  --color-accent: #9EE493;
-  --color-border: #cccccc;
+    --color-background: #1B263B;
+    --color-footer: #2F4858;
+    --color-surface: #E0E1DD;
+    --color-text: #F5F9FF;
+    --color-primary: #2EC4B6;
+    --color-primary-hover: #9EE493;
+    --color-accent: #9EE493;
+    --color-border: #cccccc;
 
-  --font-base: 'Poppins', sans-serif;
-  --radius: 8px;
-  --transition: 0.3s ease-in-out;
+    --font-base: 'Poppins', sans-serif;
+    --radius: 8px;
+    --transition: 0.3s ease-in-out;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-html, body{
+html, body {
     background-color: var(--color-background);
     font-family: var(--font-base);
     color: var(--color-text);
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
-main{
+main {
     display: flex;
     justify-content: center; 
     align-items: center;  
     height: 100vh;
     flex-direction: column;
-    gap: 2px;
+    gap: 15px;
+    flex: 1;
 }
 
-#coin-value{
+#coin-value {
     width: 250px;
-    height: 25px;
+    height: 35px;
     border-radius: var(--radius);
+    padding: 0 10px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-base);
 }
 
-.index_main_label{
+.index_main_label {
     border-radius: var(--radius);
+    margin-top: 10px;
 }
 
-.index_main_button{
+#coin {
+    width: 250px;
+    height: 35px;
+    border-radius: var(--radius);
+    padding: 0 10px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    font-family: var(--font-base);
+}
+
+.index_main_button {
     border-radius: var(--radius);
     cursor: pointer;
+    background-color: var(--color-primary);
+    border: none;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.index_main_button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+#result {
+    margin-top: 15px;
+    color: var(--color-accent);
+}
+
+footer {
+    background-color: var(--color-footer);
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+    #coin-value, #coin {
+        width: 90%;
+        max-width: 250px;
+    }
 }
